@@ -8,11 +8,12 @@
     <title>Reto Bootcamp 1</title>
     <link rel="shortcuticon" href="https://images.emojiterra.com/google/android-11/512px/1f916.png"
         type="image/x-icon" />
+
     <style>
         .container {
             width: 100%;
             background-color: black;
-        }
+        } 
 
         .card {
             width: 300px;
@@ -20,6 +21,13 @@
             margin: auto;
 
         }
+
+        /* .body {
+            text-align: center;
+        } */
+        /* .footer{
+            text-align: center;
+        } */
     </style>
 </head>
 
@@ -27,7 +35,7 @@
 <body>
 
     <article>
-        <div class="container">
+        <div class ="container">
 
             <div class="card">
                 <main>
@@ -46,8 +54,8 @@
 
                         <center>
                             <p style="color: green;">Tengo mucho interés en laborar, apoyar y obtener experiencia en las
-                            áreas de Fabricación Digital, Automatización Industrial de Procesos, Diseño Mecánico,
-                            Electrónica y Robótica.</p>
+                                áreas de Fabricación Digital, Automatización Industrial de Procesos, Diseño Mecánico,
+                                Electrónica y Robótica.</p>
                         </center>
 
                         <script src="./index.js"></script>
@@ -79,13 +87,33 @@
                             </ul>
                         </ul>
                     </nav>
+                    <center>
+                        <button id="Yes">Me gusta tu página</button>
+                    </center>
+                    <center>
+                        <button id="No">No me gusta tu página</button>
+                    </center>
                 </footer>
-
             </div>
-
         </div>
     </article>
 
+    <script>
+        const buttonSi = document.getElementById('Yes');
+        const buttonNo = document.getElementById('No');
+        const somosAmigos = () => {
+            alert('Ya somos amigos :D');
+            location.href = "https://www.youtube.com/watch?v=25eDMtPJS4M";
+        };
+        const evitarquenoseamosamigos = () => {
+            alert('Muere');
+            location.href = "https://www.youtube.com/watch?v=DkKIHfC5NtE";
+            // buttonNo.style.position = 'absolute';
+            // buttonNo.style.top = (Math.random() * windows.innerHeight) + 'px';
+            // buttonNo.style.left = (Math.random() * windows.innerWidth) + 'px';
+        };
+        buttonSi.addEventListener('click', somosAmigos);
+        buttonNo.addEventListener('click', evitarquenoseamosamigos);
+    </script>
 </body>
-
 </html>
